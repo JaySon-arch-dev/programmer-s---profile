@@ -1,54 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>JaySon | Programmer Profile</title>
 
-    <title>JaySon | Programmer's Profile</title>
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-
 
     <!-- =========================
          NAVIGATION
     ========================== -->
 
     <header>
-
         <nav>
-
             <a href="#home">Home</a>
-
             <a href="#about">About</a>
-
             <a href="#skills">Skills</a>
-
             <a href="#learning">Learning</a>
-
             <a href="#projects">Projects</a>
-
             <a href="#education">Education</a>
-
             <a href="#contact">Contact</a>
-
         </nav>
-
     </header>
-
 
 
     <!-- =========================
@@ -57,78 +34,56 @@
 
     <main>
 
-
         <!-- =========================
              HOME
         ========================== -->
 
-        <section
-            id="home"
-            class="active"
-        >
+        <section id="home" class="active">
 
-            <div class="section-content">
+            <div class="hero">
 
-                <div class="hero">
+                <div class="hero-text">
+
+                    <p class="hero-greeting">👋 Hi, I'm</p>
+
+                    <h1>JaySon</h1>
+
+                    <h2>
+                        BSIT • Network Design & Management
+                    </h2>
+
+                    <p class="hero-school">
+                        Nueva Vizcaya State University —
+                        Bayombong Campus
+                    </p>
+
+                    <p class="hero-specialization">
+                        Networking • Systems • IT
+                    </p>
+
+                    <p class="hero-description">
+                        A BSIT student majoring in Network Design
+                        & Management with an interest in networking,
+                        systems, IT infrastructure, and understanding
+                        how technology works behind the scenes.
+                    </p>
+
+                </div>
 
 
-                    <!-- Profile Image -->
+                <div class="hero-image-container">
 
-                    <div class="hero-image">
-
-                        <img
-                            src="images.jpeg"
-                            alt="JaySon profile"
-                            class="profile-image"
-                        >
-
-                    </div>
-
-
-                    <!-- Introduction -->
-
-                    <div class="hero-content">
-
-                        <p class="intro">
-                            Hello, I'm
-                        </p>
-
-                        <h1>
-                            JaySon
-                        </h1>
-
-                        <h2>
-                            BSIT • Network Design & Management
-                        </h2>
-
-                        <p>
-                            Nueva Vizcaya State University —
-                            Bayombong Campus
-                        </p>
-
-                        <p class="specialization">
-                            Networking • Systems • IT
-                        </p>
-
-                        <p class="hero-description">
-
-                            Welcome to my programmer's profile.
-
-                            This website contains information
-                            about my skills, current learning,
-                            projects, education, and interests
-                            in Information Technology.
-
-                        </p>
-
-                    </div>
+                    <img
+                        src="images.jpeg"
+                        alt="JaySon profile image"
+                        class="hero-image"
+                    >
 
                 </div>
 
             </div>
 
         </section>
-
 
 
         <!-- =========================
@@ -137,27 +92,27 @@
 
         <section id="about">
 
-
             <div class="section-header">
 
                 <div class="section-title">
 
-                    <span class="section-icon">
-                        👤
-                    </span>
+                    <span class="section-icon">👨‍💻</span>
 
-                    <h2>
-                        About Me
-                    </h2>
+                    <h2>About</h2>
+
+                    <button
+                        class="expand-button"
+                        aria-label="Expand About section"
+                        type="button"
+                    >
+                        🔽
+                    </button>
 
                 </div>
 
-
-                <button class="expand-button">
-
+                <p class="expand-label">
                     Click here to expand
-
-                </button>
+                </p>
 
             </div>
 
@@ -165,48 +120,26 @@
             <div class="section-content">
 
                 <p>
-
-                    I'm a BSIT student majoring in
-                    <strong>
-                        Network Design & Management
-                    </strong>
-                    at Nueva Vizcaya State University —
-                    Bayombong Campus.
-
+                    I'm currently a BSIT student majoring in
+                    Network Design & Management at Nueva Vizcaya
+                    State University — Bayombong Campus.
                 </p>
 
-
                 <p>
-
-                    I'm interested in
-                    <strong>
-                        networking, systems,
-                        IT infrastructure,
-                        and how technology works
-                        behind the scenes
-                    </strong>.
-
+                    I'm interested in networking, systems,
+                    IT infrastructure, and understanding how
+                    technology works behind the scenes.
                 </p>
 
-
                 <p>
-
-                    I enjoy learning through
-                    <strong>
-                        hands-on troubleshooting,
-                        problem solving,
-                        and understanding how
-                        different parts of a system
-                        work together
-                    </strong>.
-
+                    I enjoy hands-on troubleshooting, problem
+                    solving, and figuring out how different
+                    components work together as one system.
                 </p>
 
             </div>
 
-
         </section>
-
 
 
         <!-- =========================
@@ -215,137 +148,81 @@
 
         <section id="skills">
 
-
             <div class="section-header">
 
                 <div class="section-title">
 
-                    <span class="section-icon">
-                        🛠️
-                    </span>
+                    <span class="section-icon">🛠️</span>
 
-                    <h2>
-                        Skills
-                    </h2>
+                    <h2>Skills</h2>
+
+                    <button
+                        class="expand-button"
+                        aria-label="Expand Skills section"
+                        type="button"
+                    >
+                        🔽
+                    </button>
 
                 </div>
 
-
-                <button class="expand-button">
-
+                <p class="expand-label">
                     Click here to expand
-
-                </button>
+                </p>
 
             </div>
 
 
             <div class="section-content">
 
-
-                <div class="skills-container">
-
-
-                    <!-- Networking -->
+                <div class="skills-grid">
 
                     <div class="skill-card">
 
-                        <h3>
-                            🌐 Networking
-                        </h3>
+                        <h3>🌐 Networking</h3>
 
                         <ul>
-
-                            <li>
-                                Basic VLAN configuration
-                            </li>
-
-                            <li>
-                                Basic routing
-                            </li>
-
-                            <li>
-                                Basic trunking
-                            </li>
-
-                            <li>
-                                Basic network topology
-                            </li>
-
-                            <li>
-                                Basic network troubleshooting
-                            </li>
-
+                            <li>Basic VLAN configuration</li>
+                            <li>Basic routing</li>
+                            <li>Basic trunking</li>
+                            <li>Basic network topology</li>
+                            <li>Basic network troubleshooting</li>
                         </ul>
 
                     </div>
 
 
-                    <!-- Programming -->
-
                     <div class="skill-card">
 
-                        <h3>
-                            💻 Programming
-                        </h3>
+                        <h3>💻 Programming</h3>
 
                         <ul>
-
-                            <li>
-                                Basic Java
-                            </li>
-
-                            <li>
-                                Object-Oriented Programming
-                            </li>
-
+                            <li>Basic Java</li>
+                            <li>Object-Oriented Programming</li>
                         </ul>
 
                     </div>
 
 
-                    <!-- Tools -->
-
                     <div class="skill-card">
 
-                        <h3>
-                            🧰 Tools & Platforms
-                        </h3>
+                        <h3>⚙️ Tools & Platforms</h3>
 
                         <ul>
-
-                            <li>
-                                GitHub
-                            </li>
-
-                            <li>
-                                Vercel
-                            </li>
-
-                            <li>
-                                Cisco Packet Tracer
-                            </li>
-
-                            <li>
-                                Microsoft Power Apps
-                            </li>
-
-                            <li>
-                                Microsoft SharePoint
-                            </li>
-
+                            <li>GitHub</li>
+                            <li>Vercel</li>
+                            <li>Cisco Packet Tracer</li>
+                            <li>Microsoft Power Apps</li>
+                            <li>Microsoft SharePoint</li>
                         </ul>
 
                     </div>
-
 
                 </div>
 
             </div>
 
-
         </section>
-
 
 
         <!-- =========================
@@ -354,43 +231,34 @@
 
         <section id="learning">
 
-
             <div class="section-header">
 
                 <div class="section-title">
 
-                    <span class="section-icon">
-                        📚
-                    </span>
+                    <span class="section-icon">📚</span>
 
-                    <h2>
-                        Currently Learning
-                    </h2>
+                    <h2>Currently Learning</h2>
+
+                    <button
+                        class="expand-button"
+                        aria-label="Expand Currently Learning section"
+                        type="button"
+                    >
+                        🔽
+                    </button>
 
                 </div>
 
-
-                <button class="expand-button">
-
+                <p class="expand-label">
                     Click here to expand
-
-                </button>
+                </p>
 
             </div>
 
 
             <div class="section-content">
 
-
-                <p>
-
-                    Things I'm currently exploring
-                    and developing as a student:
-
-                </p>
-
-
-                <ul class="learning-list">
+                <ul>
 
                     <li>
                         Network troubleshooting
@@ -418,12 +286,9 @@
 
                 </ul>
 
-
             </div>
 
-
         </section>
-
 
 
         <!-- =========================
@@ -432,27 +297,27 @@
 
         <section id="projects">
 
-
             <div class="section-header">
 
                 <div class="section-title">
 
-                    <span class="section-icon">
-                        💻
-                    </span>
+                    <span class="section-icon">🚀</span>
 
-                    <h2>
-                        Projects
-                    </h2>
+                    <h2>Projects</h2>
+
+                    <button
+                        class="expand-button"
+                        aria-label="Expand Projects section"
+                        type="button"
+                    >
+                        🔽
+                    </button>
 
                 </div>
 
-
-                <button class="expand-button">
-
+                <p class="expand-label">
                     Click here to expand
-
-                </button>
+                </p>
 
             </div>
 
@@ -462,27 +327,226 @@
 
                 <!-- Library Management System -->
 
-                <article class="project-card">
+                <div class="project-card">
 
                     <h3>
                         📚 Library Management System
                     </h3>
 
                     <p>
-
-                        A console-based
-                        <strong>
-                            Library Management System
-                        </strong>
-                        developed as a Java
-                        Object-Oriented Programming
-                        project.
-
+                        A console-based Java project focused on
+                        Object-Oriented Programming.
                     </p>
 
+                    <ul>
+                        <li>Classes and objects</li>
+                        <li>Encapsulation</li>
+                        <li>Methods</li>
+                        <li>Object relationships</li>
+                        <li>Basic borrowing logic</li>
+                    </ul>
 
-                    <h4>
-                        Technologies
+                    <a
+                        href="https://github.com/JaySon-arch-dev/Library-Manager-System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View on GitHub →
+                    </a>
+
+                </div>
+
+
+                <!-- Equipment Borrowing System -->
+
+                <div class="project-card">
+
+                    <h3>
+                        🖥️ Equipment Borrowing Management System
+                    </h3>
+
+                    <p>
+                        A university project designed for faculty
+                        equipment borrowing and returning.
+                    </p>
+
+                    <ul>
+                        <li>Microsoft Power Apps</li>
+                        <li>Power Fx</li>
+                        <li>Microsoft SharePoint</li>
+                        <li>Authentication</li>
+                        <li>Role-Based Access Control</li>
+                        <li>Borrowing and approval</li>
+                        <li>Transaction and return management</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Networking Projects -->
+
+                <div class="project-card">
+
+                    <h3>
+                        🌐 Network Configuration Projects
+                    </h3>
+
+                    <p>
+                        Hands-on networking exercises and
+                        configurations developed using Cisco
+                        Packet Tracer.
+                    </p>
+
+                    <ul>
+                        <li>VLAN configuration</li>
+                        <li>Trunking</li>
+                        <li>Routing</li>
+                        <li>DHCP</li>
+                        <li>Network topology</li>
+                        <li>Inter-VLAN communication</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION
+        ========================== -->
+
+        <section id="education">
+
+            <div class="section-header">
+
+                <div class="section-title">
+
+                    <span class="section-icon">🎓</span>
+
+                    <h2>Education</h2>
+
+                    <button
+                        class="expand-button"
+                        aria-label="Expand Education section"
+                        type="button"
+                    >
+                        🔽
+                    </button>
+
+                </div>
+
+                <p class="expand-label">
+                    Click here to expand
+                </p>
+
+            </div>
+
+
+            <div class="section-content">
+
+                <h3>
+                    Nueva Vizcaya State University
+                </h3>
+
+                <p>
+                    Bayombong Campus
+                </p>
+
+                <p>
+                    <strong>
+                        Bachelor of Science in Information Technology
+                    </strong>
+                </p>
+
+                <p>
+                    Major in Network Design & Management
+                </p>
+
+                <p>
+                    Currently: 3rd Year
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact">
+
+            <div class="section-header">
+
+                <div class="section-title">
+
+                    <span class="section-icon">📬</span>
+
+                    <h2>Contact</h2>
+
+                    <button
+                        class="expand-button"
+                        aria-label="Expand Contact section"
+                        type="button"
+                    >
+                        🔽
+                    </button>
+
+                </div>
+
+                <p class="expand-label">
+                    Click here to expand
+                </p>
+
+            </div>
+
+
+            <div class="section-content">
+
+                <p>
+                    You can find my projects and development
+                    work on GitHub.
+                </p>
+
+                <p>
+                    <strong>GitHub:</strong>
+                    <a
+                        href="https://github.com/JaySon-arch-dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        @JaySon-arch-dev
+                    </a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Still learning. Still building.
+            Still figuring things out. 🚀
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+                        </html>           Technologies
                     </h4>
 
                     <p>
