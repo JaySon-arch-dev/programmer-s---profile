@@ -1,51 +1,57 @@
-const navLinks =
-    document.querySelectorAll("nav a");
-
-const sections =
-    document.querySelectorAll("main > section");
-
-const expandButtons =
-    document.querySelectorAll(".expand-button");
+const navLinks = document.querySelectorAll("nav a");
+const sections = document.querySelectorAll("main > section");
+const expandButtons = document.querySelectorAll(".expand-button");
 
 
 /* =========================
    OPEN SECTION
 ========================= */
 
-function openSection(sectionId) {
+function openSection(sectionId, shouldScroll = true) {
 
     const targetSection =
         document.querySelector(sectionId);
-
 
     if (!targetSection) {
         return;
     }
 
-
-    /* Expand the section */
-
     targetSection.classList.add("active");
 
 
-    /*
-        Wait briefly for the expansion
-        animation to begin, then scroll
-        to the section.
-    */
+    if (shouldScroll) {
 
-    setTimeout(() => {
+        setTimeout(() => {
 
-        targetSection.scrollIntoView({
+            const navigation =
+                document.querySelector("header");
 
-            behavior: "smooth",
+            const navigationHeight =
+                navigation.offsetHeight;
 
-            block: "start"
+            const sectionPosition =
+                targetSection.getBoundingClientRect().top;
 
-        });
+            const currentPosition =
+                window.scrollY;
 
-    }, 150);
+            const scrollPosition =
+                currentPosition +
+                sectionPosition -
+                navigationHeight -
+                15;
 
+
+            window.scrollTo({
+
+                top: scrollPosition,
+
+                behavior: "smooth"
+
+            });
+
+        }, 180);
+    }
 }
 
 
@@ -61,12 +67,10 @@ navLinks.forEach(link => {
 
             event.preventDefault();
 
-
             const targetId =
                 this.getAttribute("href");
 
-
-            openSection(targetId);
+            openSection(targetId, true);
 
         }
     );
@@ -75,7 +79,7 @@ navLinks.forEach(link => {
 
 
 /* =========================
-   EXPAND BUTTONS
+   EXPAND BUTTON
 ========================= */
 
 expandButtons.forEach(button => {
@@ -86,10 +90,8 @@ expandButtons.forEach(button => {
 
             event.stopPropagation();
 
-
             const section =
                 this.closest("section");
-
 
             if (!section) {
                 return;
@@ -99,13 +101,37 @@ expandButtons.forEach(button => {
             section.classList.add("active");
 
 
-            section.scrollIntoView({
+            const navigation =
+                document.querySelector("header");
 
-                behavior: "smooth",
+            const navigationHeight =
+                navigation.offsetHeight;
 
-                block: "start"
 
-            });
+            setTimeout(() => {
+
+                const sectionPosition =
+                    section.getBoundingClientRect().top;
+
+                const currentPosition =
+                    window.scrollY;
+
+                const scrollPosition =
+                    currentPosition +
+                    sectionPosition -
+                    navigationHeight -
+                    15;
+
+
+                window.scrollTo({
+
+                    top: scrollPosition,
+
+                    behavior: "smooth"
+
+                });
+
+            }, 180);
 
         }
     );
@@ -120,9 +146,7 @@ expandButtons.forEach(button => {
 sections.forEach(section => {
 
     const header =
-        section.querySelector(
-            ".section-header"
-        );
+        section.querySelector(".section-header");
 
 
     if (!header) {
@@ -133,11 +157,6 @@ sections.forEach(section => {
     header.addEventListener(
         "click",
         function(event) {
-
-            /*
-                Don't run this when the
-                expand button itself is clicked.
-            */
 
             if (
                 event.target.classList.contains(
@@ -151,13 +170,37 @@ sections.forEach(section => {
             section.classList.add("active");
 
 
-            section.scrollIntoView({
+            const navigation =
+                document.querySelector("header");
 
-                behavior: "smooth",
+            const navigationHeight =
+                navigation.offsetHeight;
 
-                block: "start"
 
-            });
+            setTimeout(() => {
+
+                const sectionPosition =
+                    section.getBoundingClientRect().top;
+
+                const currentPosition =
+                    window.scrollY;
+
+                const scrollPosition =
+                    currentPosition +
+                    sectionPosition -
+                    navigationHeight -
+                    15;
+
+
+                window.scrollTo({
+
+                    top: scrollPosition,
+
+                    behavior: "smooth"
+
+                });
+
+            }, 180);
 
         }
     );
@@ -177,4 +220,4 @@ if (home) {
 
     home.classList.add("active");
 
-}
+                                  }
