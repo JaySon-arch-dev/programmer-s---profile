@@ -4,32 +4,25 @@ const sections = document.querySelectorAll("main > section");
 
 function openSection(sectionId) {
 
-    // Close all sections
-    sections.forEach(section => {
-        section.classList.remove("active");
-    });
-
-
-    // Find the selected section
     const targetSection = document.querySelector(sectionId);
 
-
-    // Open the selected section
-    if (targetSection) {
-
-        targetSection.classList.add("active");
-
-
-        // Move the page to the selected section
-        setTimeout(() => {
-
-            targetSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }, 100);
+    if (!targetSection) {
+        return;
     }
+
+    // Expand the selected section
+    targetSection.classList.add("active");
+
+    // Wait for the expansion to begin,
+    // then scroll to the section.
+    setTimeout(() => {
+
+        targetSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
 }
 
 
@@ -50,6 +43,30 @@ navLinks.forEach(link => {
 });
 
 
-/* Open Home automatically when the website loads */
+/* Section headings can also be clicked */
+
+sections.forEach(section => {
+
+    const heading = section.querySelector("h2");
+
+    if (heading) {
+
+        heading.addEventListener("click", function() {
+
+            section.classList.add("active");
+
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        });
+
+    }
+
+});
+
+
+/* Home starts expanded */
 
 openSection("#home");
