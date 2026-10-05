@@ -1,14 +1,21 @@
-const navLinks = document.querySelectorAll("nav a");
-const sections = document.querySelectorAll("main > section");
-const expandButtons = document.querySelectorAll(".expand-button");
+const navLinks =
+    document.querySelectorAll("nav a");
+
+const sections =
+    document.querySelectorAll("main > section");
+
+const expandButtons =
+    document.querySelectorAll(".expand-button");
 
 
 /* =========================
-   GET NAVIGATION HEIGHT
+   NAVIGATION HEIGHT
 ========================= */
 
 function getNavigationHeight() {
-    const navigation = document.querySelector("header");
+
+    const navigation =
+        document.querySelector("header");
 
     if (!navigation) {
         return 0;
@@ -28,7 +35,8 @@ function scrollToSection(section) {
 
     setTimeout(() => {
 
-        const navigationHeight = getNavigationHeight();
+        const navigationHeight =
+            getNavigationHeight();
 
         const sectionPosition =
             section.getBoundingClientRect().top;
@@ -55,15 +63,13 @@ function scrollToSection(section) {
    OPEN SECTION
 ========================= */
 
-function openSection(section, shouldScroll = true) {
+function openSection(section) {
 
     if (!section) return;
 
     section.classList.add("active");
 
-    if (shouldScroll) {
-        scrollToSection(section);
-    }
+    scrollToSection(section);
 }
 
 
@@ -80,7 +86,8 @@ function closeSection(section) {
 
 
 /* =========================
-   CLOSE ALL EXCEPT HOME
+   CLOSE ALL SECTIONS
+   EXCEPT HOME
 ========================= */
 
 function closeAllSections() {
@@ -88,95 +95,128 @@ function closeAllSections() {
     sections.forEach(section => {
 
         if (section.id !== "home") {
-            closeSection(section);
+
+            section.classList.remove("active");
+
         }
 
     });
+
 }
 
 
 /* =========================
-   NAVIGATION CLICKS
+   NAVIGATION
 ========================= */
 
 navLinks.forEach(link => {
 
-    link.addEventListener("click", function(event) {
+    link.addEventListener(
+        "click",
+        function(event) {
 
-        event.preventDefault();
+            event.preventDefault();
 
-        const targetId =
-            this.getAttribute("href");
+            const targetId =
+                this.getAttribute("href");
 
-        const targetSection =
-            document.querySelector(targetId);
+            const targetSection =
+                document.querySelector(targetId);
 
-        if (!targetSection) return;
+            if (!targetSection) return;
 
 
-        /* HOME */
+            /* =====================
+               HOME
+            ===================== */
 
-        if (targetId === "#home") {
+            if (targetId === "#home") {
 
-            closeAllSections();
+                /*
+                 * Clicking Home closes
+                 * every other section.
+                 */
 
-            targetSection.classList.add("active");
+                closeAllSections();
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+                targetSection.classList.add("active");
 
-            return;
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+                return;
+            }
+
+
+            /* =====================
+               OTHER SECTIONS
+            ===================== */
+
+            openSection(targetSection);
+
         }
-
-
-        /* OTHER SECTIONS */
-
-        openSection(targetSection, true);
-
-    });
+    );
 
 });
 
 
 /* =========================
-   EXPAND / RETRACT BUTTON
+   EXPAND / RETRACT ARROWS
 ========================= */
 
 expandButtons.forEach(button => {
 
-    button.addEventListener("click", function(event) {
+    button.addEventListener(
+        "click",
+        function(event) {
 
-        event.stopPropagation();
+            /*
+             * Prevent the section header
+             * from receiving the same click.
+             */
 
-        const section =
-            this.closest("section");
-
-        if (!section) return;
+            event.stopPropagation();
 
 
-        /* RETRACT */
+            const section =
+                this.closest("section");
 
-        if (section.classList.contains("active")) {
+            if (!section) return;
 
-            closeSection(section);
 
-            return;
+            /*
+             * If already open:
+             * RETRACT IT.
+             */
+
+            if (
+                section.classList.contains("active")
+            ) {
+
+                closeSection(section);
+
+                return;
+            }
+
+
+            /*
+             * Otherwise:
+             * EXPAND IT.
+             */
+
+            openSection(section);
+
         }
-
-
-        /* EXPAND */
-
-        openSection(section, true);
-
-    });
+    );
 
 });
 
 
 /* =========================
-   CLICK SECTION HEADER
+   SECTION HEADER CLICK
 ========================= */
 
 sections.forEach(section => {
@@ -187,41 +227,53 @@ sections.forEach(section => {
     if (!header) return;
 
 
-    header.addEventListener("click", function(event) {
+    header.addEventListener(
+        "click",
+        function(event) {
 
-        /*
-         * If the actual arrow button was clicked,
-         * let the arrow's own event handle it.
-         */
+            /*
+             * If the arrow itself was clicked,
+             * let the arrow event handle it.
+             */
 
-        if (
-            event.target.closest(".expand-button")
-        ) {
-            return;
+            if (
+                event.target.closest(
+                    ".expand-button"
+                )
+            ) {
+
+                return;
+            }
+
+
+            /*
+             * Clicking a collapsed section
+             * opens it.
+             */
+
+            if (
+                !section.classList.contains("active")
+            ) {
+
+                openSection(section);
+
+            }
+
         }
-
-
-        /* If already open, leave it open */
-
-        if (section.classList.contains("active")) {
-            return;
-        }
-
-
-        openSection(section, true);
-
-    });
+    );
 
 });
 
 
 /* =========================
-   HOME STARTS OPEN
+   INITIAL HOME STATE
 ========================= */
 
 const home =
     document.querySelector("#home");
 
 if (home) {
+
     home.classList.add("active");
+
 }
