@@ -4,143 +4,179 @@ const expandButtons = document.querySelectorAll(".expand-button");
 
 
 /* =========================
+   GET NAVIGATION HEIGHT
+========================= */
+
+function getNavigationHeight() {
+    const navigation = document.querySelector("header");
+
+    if (!navigation) {
+        return 0;
+    }
+
+    return navigation.offsetHeight;
+}
+
+
+/* =========================
+   SCROLL TO SECTION
+========================= */
+
+function scrollToSection(section) {
+
+    if (!section) return;
+
+    setTimeout(() => {
+
+        const navigationHeight = getNavigationHeight();
+
+        const sectionPosition =
+            section.getBoundingClientRect().top;
+
+        const currentPosition =
+            window.scrollY;
+
+        const scrollPosition =
+            currentPosition +
+            sectionPosition -
+            navigationHeight -
+            15;
+
+        window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth"
+        });
+
+    }, 180);
+}
+
+
+/* =========================
    OPEN SECTION
 ========================= */
 
-function openSection(sectionId, shouldScroll = true) {
+function openSection(section, shouldScroll = true) {
 
-    const targetSection =
-        document.querySelector(sectionId);
+    if (!section) return;
 
-    if (!targetSection) {
-        return;
-    }
-
-    targetSection.classList.add("active");
-
+    section.classList.add("active");
 
     if (shouldScroll) {
-
-        setTimeout(() => {
-
-            const navigation =
-                document.querySelector("header");
-
-            const navigationHeight =
-                navigation.offsetHeight;
-
-            const sectionPosition =
-                targetSection.getBoundingClientRect().top;
-
-            const currentPosition =
-                window.scrollY;
-
-            const scrollPosition =
-                currentPosition +
-                sectionPosition -
-                navigationHeight -
-                15;
-
-
-            window.scrollTo({
-
-                top: scrollPosition,
-
-                behavior: "smooth"
-
-            });
-
-        }, 180);
+        scrollToSection(section);
     }
 }
 
 
 /* =========================
-   NAVIGATION
+   CLOSE SECTION
+========================= */
+
+function closeSection(section) {
+
+    if (!section) return;
+
+    section.classList.remove("active");
+}
+
+
+/* =========================
+   CLOSE ALL EXCEPT HOME
+========================= */
+
+function closeAllSections() {
+
+    sections.forEach(section => {
+
+        if (section.id !== "home") {
+            closeSection(section);
+        }
+
+    });
+}
+
+
+/* =========================
+   NAVIGATION CLICKS
 ========================= */
 
 navLinks.forEach(link => {
 
-    link.addEventListener(
-        "click",
-        function(event) {
+    link.addEventListener("click", function(event) {
 
-            event.preventDefault();
+        event.preventDefault();
 
-            const targetId =
-                this.getAttribute("href");
+        const targetId =
+            this.getAttribute("href");
 
-            openSection(targetId, true);
+        const targetSection =
+            document.querySelector(targetId);
 
+        if (!targetSection) return;
+
+
+        /* HOME */
+
+        if (targetId === "#home") {
+
+            closeAllSections();
+
+            targetSection.classList.add("active");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+            return;
         }
-    );
+
+
+        /* OTHER SECTIONS */
+
+        openSection(targetSection, true);
+
+    });
 
 });
 
 
 /* =========================
-   EXPAND BUTTON
+   EXPAND / RETRACT BUTTON
 ========================= */
 
 expandButtons.forEach(button => {
 
-    button.addEventListener(
-        "click",
-        function(event) {
+    button.addEventListener("click", function(event) {
 
-            event.stopPropagation();
+        event.stopPropagation();
 
-            const section =
-                this.closest("section");
+        const section =
+            this.closest("section");
 
-            if (!section) {
-                return;
-            }
+        if (!section) return;
 
 
-            section.classList.add("active");
+        /* RETRACT */
 
+        if (section.classList.contains("active")) {
 
-            const navigation =
-                document.querySelector("header");
+            closeSection(section);
 
-            const navigationHeight =
-                navigation.offsetHeight;
-
-
-            setTimeout(() => {
-
-                const sectionPosition =
-                    section.getBoundingClientRect().top;
-
-                const currentPosition =
-                    window.scrollY;
-
-                const scrollPosition =
-                    currentPosition +
-                    sectionPosition -
-                    navigationHeight -
-                    15;
-
-
-                window.scrollTo({
-
-                    top: scrollPosition,
-
-                    behavior: "smooth"
-
-                });
-
-            }, 180);
-
+            return;
         }
-    );
+
+
+        /* EXPAND */
+
+        openSection(section, true);
+
+    });
 
 });
 
 
 /* =========================
-   SECTION HEADER
+   CLICK SECTION HEADER
 ========================= */
 
 sections.forEach(section => {
@@ -148,62 +184,33 @@ sections.forEach(section => {
     const header =
         section.querySelector(".section-header");
 
-
-    if (!header) {
-        return;
-    }
+    if (!header) return;
 
 
-    header.addEventListener(
-        "click",
-        function(event) {
+    header.addEventListener("click", function(event) {
 
-            if (
-                event.target.classList.contains(
-                    "expand-button"
-                )
-            ) {
-                return;
-            }
+        /*
+         * If the actual arrow button was clicked,
+         * let the arrow's own event handle it.
+         */
 
-
-            section.classList.add("active");
-
-
-            const navigation =
-                document.querySelector("header");
-
-            const navigationHeight =
-                navigation.offsetHeight;
-
-
-            setTimeout(() => {
-
-                const sectionPosition =
-                    section.getBoundingClientRect().top;
-
-                const currentPosition =
-                    window.scrollY;
-
-                const scrollPosition =
-                    currentPosition +
-                    sectionPosition -
-                    navigationHeight -
-                    15;
-
-
-                window.scrollTo({
-
-                    top: scrollPosition,
-
-                    behavior: "smooth"
-
-                });
-
-            }, 180);
-
+        if (
+            event.target.closest(".expand-button")
+        ) {
+            return;
         }
-    );
+
+
+        /* If already open, leave it open */
+
+        if (section.classList.contains("active")) {
+            return;
+        }
+
+
+        openSection(section, true);
+
+    });
 
 });
 
@@ -215,9 +222,6 @@ sections.forEach(section => {
 const home =
     document.querySelector("#home");
 
-
 if (home) {
-
     home.classList.add("active");
-
-                                  }
+}
