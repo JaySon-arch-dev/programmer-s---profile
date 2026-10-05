@@ -1,3 +1,7 @@
+/* =========================
+   ELEMENTS
+========================= */
+
 const navLinks = document.querySelectorAll("nav a");
 const sections = document.querySelectorAll("main > section");
 const sectionHeaders = document.querySelectorAll(".section-header");
@@ -8,6 +12,7 @@ const sectionHeaders = document.querySelectorAll(".section-header");
 ========================= */
 
 function getNavigationHeight() {
+
     const navigation = document.querySelector("header");
 
     if (!navigation) {
@@ -23,11 +28,13 @@ function getNavigationHeight() {
 ========================= */
 
 function scrollToSection(section) {
+
     if (!section) return;
 
     setTimeout(() => {
 
-        const navigationHeight = getNavigationHeight();
+        const navigationHeight =
+            getNavigationHeight();
 
         const sectionPosition =
             section.getBoundingClientRect().top;
@@ -60,6 +67,7 @@ function updateArrow(section) {
         section.querySelector(".arrow-icon");
 
     if (!arrow) return;
+
 
     if (section.classList.contains("active")) {
 
@@ -104,7 +112,8 @@ function closeSection(section) {
 
 
 /* =========================
-   CLOSE ALL EXCEPT HOME
+   CLOSE ALL NON-HOME
+   SECTIONS
 ========================= */
 
 function closeAllSections() {
@@ -116,6 +125,7 @@ function closeAllSections() {
             section.classList.remove("active");
 
             updateArrow(section);
+
         }
 
     });
@@ -123,7 +133,7 @@ function closeAllSections() {
 
 
 /* =========================
-   NAVIGATION CLICKS
+   NAVIGATION CLICK
 ========================= */
 
 navLinks.forEach(link => {
@@ -168,7 +178,7 @@ navLinks.forEach(link => {
 
 
 /* =========================
-   SECTION HEADER CLICKS
+   SECTION HEADER CLICK
 ========================= */
 
 sectionHeaders.forEach(header => {
@@ -181,14 +191,14 @@ sectionHeaders.forEach(header => {
         if (!section) return;
 
 
-        /* HOME DOES NOT COLLAPSE */
+        /* HOME ALWAYS STAYS OPEN */
 
         if (section.id === "home") {
             return;
         }
 
 
-        /* RETRACT IF OPEN */
+        /* CLOSE IF OPEN */
 
         if (section.classList.contains("active")) {
 
@@ -197,7 +207,7 @@ sectionHeaders.forEach(header => {
         }
 
 
-        /* EXPAND IF CLOSED */
+        /* OPEN IF CLOSED */
 
         else {
 
@@ -217,17 +227,25 @@ sectionHeaders.forEach(header => {
 const home =
     document.querySelector("#home");
 
+
 if (home) {
 
     home.classList.add("active");
 
     updateArrow(home);
+
 }
 
+
+/* Make sure every
+   collapsible section
+   starts closed */
 
 sections.forEach(section => {
 
     if (section.id !== "home") {
+
+        section.classList.remove("active");
 
         updateArrow(section);
 
