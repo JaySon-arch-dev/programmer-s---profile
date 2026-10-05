@@ -22,6 +22,7 @@ body {
 header {
     background: #111827;
     padding: 18px 20px;
+
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -38,6 +39,7 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+
     transition: color 0.2s ease;
 }
 
@@ -58,48 +60,81 @@ main {
    EXPANDABLE SECTIONS
    ========================= */
 
+/*
+   Every section remains visible on the page.
+
+   Closed:
+   → heading remains visible
+   → description/content is hidden
+
+   Open:
+   → entire section expands
+*/
+
 main > section {
-    max-height: 0;
+    background: white;
+
+    margin: 18px 15px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    max-height: 95px;
     overflow: hidden;
-    padding-top: 0;
-    padding-bottom: 0;
-    opacity: 0;
+
+    opacity: 0.9;
 
     transition:
-        max-height 0.6s ease,
+        max-height 0.7s ease,
         opacity 0.4s ease,
-        padding 0.6s ease;
+        margin 0.4s ease;
 }
+
+/* Expanded section */
 
 main > section.active {
     max-height: 4000px;
-    padding: 70px 25px;
     opacity: 1;
 }
 
-/* Home */
+/* Section heading */
 
-main > section#home.active {
-    min-height: 90vh;
+section > h2 {
+    margin-bottom: 0;
+
+    font-size: 2rem;
+
+    cursor: pointer;
 }
 
-/* Section headings */
+/* Add spacing when expanded */
 
-section h2 {
-    font-size: 2rem;
+section.active > h2 {
     margin-bottom: 25px;
 }
 
 /* =========================
-   HERO / HOME
+   HOME / INTRODUCTION
    ========================= */
+
+#home {
+    min-height: 95px;
+}
+
+#home.active {
+    min-height: 90vh;
+}
+
+/* Hero */
 
 .hero {
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     gap: 50px;
-    background: white;
 }
 
 .hero-image {
@@ -110,6 +145,7 @@ section h2 {
 .profile-image {
     width: 100%;
     max-width: 400px;
+
     border-radius: 20px;
 }
 
@@ -123,16 +159,19 @@ section h2 {
 
 .hero h1 {
     font-size: 4rem;
+
     margin: 10px 0;
 }
 
 .hero h2 {
     font-size: 1.5rem;
+
     margin-bottom: 10px;
 }
 
 .specialization {
     margin-top: 15px;
+
     font-weight: bold;
 }
 
@@ -142,19 +181,25 @@ section h2 {
 
 .skills-container {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
 .skill-card,
 .project-card,
 .education-card {
-    background: white;
+    background: #f9fafb;
+
     padding: 25px;
+
     border-radius: 12px;
+
     margin-bottom: 20px;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .skill-card h3,
@@ -171,8 +216,10 @@ ul {
 }
 
 .learning-list {
-    background: white;
+    background: #f9fafb;
+
     padding: 25px 25px 25px 45px;
+
     border-radius: 12px;
 }
 
@@ -188,10 +235,13 @@ ul {
 .project-card a,
 #contact a {
     display: inline-block;
+
     margin-top: 15px;
 
     color: #2563eb;
+
     font-weight: bold;
+
     text-decoration: none;
 }
 
@@ -206,8 +256,11 @@ ul {
 
 footer {
     text-align: center;
+
     padding: 30px 20px;
+
     background: #111827;
+
     color: white;
 }
 
@@ -221,17 +274,17 @@ footer {
         gap: 12px;
     }
 
-    main > section.active {
-        padding: 50px 20px;
-    }
+    main > section {
+        margin: 15px 10px;
 
-    main > section#home.active {
-        min-height: auto;
+        padding: 20px;
     }
 
     .hero {
         flex-direction: column;
+
         text-align: center;
+
         gap: 30px;
     }
 
