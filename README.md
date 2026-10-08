@@ -39,8 +39,7 @@ how different parts of technology work together.
 - Vercel
 - Cisco Packet Tracer
 - Microsoft Power Apps
-- Microsoft SharePoint
-
+  
 ## 📂 Projects
 
 ### Library Management System
