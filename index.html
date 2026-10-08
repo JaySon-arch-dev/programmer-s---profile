@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +9,7 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link
@@ -23,126 +17,120 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
-    <!-- CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ==============================
-         SIDEBAR
-    =============================== -->
-
+    <!-- =========================================
+         SIDEBAR / MOBILE NAVIGATION
+    ========================================== -->
     <aside class="sidebar">
 
-        <div class="sidebar-top">
+        <!-- Profile -->
+        <div class="brand">
 
-            <div class="brand">
+            <img
+                src="images.jpeg"
+                alt="JaySon profile picture"
+                class="brand-photo"
+            >
 
-                <div class="brand-mark">
-                    J
-                </div>
-
-                <div class="brand-text">
-                    <h2>JaySon</h2>
-                    <span>BSIT • NDM</span>
-                </div>
-
+            <div class="brand-info">
+                <h2>JaySon</h2>
+                <span>BSIT • NDM</span>
             </div>
-
-
-            <div class="sidebar-divider"></div>
-
-
-            <nav class="navigation">
-
-                <a href="#home" class="nav-link">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
-                </a>
-
-                <a href="#about" class="nav-link">
-                    <i class="fa-solid fa-user"></i>
-                    <span>About</span>
-                </a>
-
-                <a href="#skills" class="nav-link">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <span>Skills</span>
-                </a>
-
-                <a href="#learning" class="nav-link">
-                    <i class="fa-solid fa-book-open"></i>
-                    <span>Currently Learning</span>
-                </a>
-
-                <a href="#projects" class="nav-link">
-                    <i class="fa-solid fa-folder-open"></i>
-                    <span>Projects</span>
-                </a>
-
-                <a href="#education" class="nav-link">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>Education</span>
-                </a>
-
-                <a href="#contact" class="nav-link">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>Contact</span>
-                </a>
-
-            </nav>
 
         </div>
 
 
-        <div class="sidebar-bottom">
+        <!-- Navigation -->
+        <nav class="navigation">
 
-            <span>Still learning.</span>
-            <span>Still building.</span>
+            <a href="#home" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
 
+            <a href="#about" class="nav-link">
+                <i class="fa-solid fa-user"></i>
+                <span>About</span>
+            </a>
+
+            <a href="#skills" class="nav-link">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span>Skills</span>
+            </a>
+
+            <a href="#learning" class="nav-link">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Currently Learning</span>
+            </a>
+
+            <a href="#projects" class="nav-link">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Projects</span>
+            </a>
+
+            <a href="#education" class="nav-link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Education</span>
+            </a>
+
+            <a href="#contact" class="nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+            <p>Still learning.</p>
+            <p>Still building.</p>
         </div>
 
     </aside>
 
 
 
-    <!-- ==============================
+    <!-- =========================================
          MAIN CONTENT
-    =============================== -->
-
+    ========================================== -->
     <main class="main-content">
 
 
-        <!-- ==============================
+        <!-- =====================================
              HOME
-        =============================== -->
-
-        <section id="home" class="section-card hero-section">
+        ====================================== -->
+        <section id="home" class="section-card home-section">
 
             <div class="hero-content">
 
                 <div class="hero-text">
 
-                    <p class="eyebrow">
-                        <i class="fa-solid fa-code"></i>
+                    <span class="eyebrow">
                         Programmer's Profile
-                    </p>
+                    </span>
 
                     <h1>
                         Hi, I'm <span>JaySon</span>
                     </h1>
 
-                    <h2>
+                    <h3>
                         BSIT • Network Design & Management
-                    </h2>
+                    </h3>
 
-                    <p class="university">
-                        Nueva Vizcaya State University — Bayombong Campus
+                    <p class="school">
+                        Nueva Vizcaya State University —
+                        Bayombong Campus
                     </p>
 
 
-                    <div class="hero-tags">
+                    <!-- Tags -->
+                    <div class="tags">
 
                         <span>Networking</span>
                         <span>Systems</span>
@@ -152,20 +140,22 @@
 
 
                     <p class="hero-description">
-                        An aspiring IT professional interested in networking,
-                        systems, infrastructure, and understanding how
+                        I'm an aspiring IT professional interested in
+                        networking, systems, infrastructure,
+                        troubleshooting, and understanding how
                         technology works behind the scenes.
                     </p>
 
                 </div>
 
 
-                <div class="profile-image-wrapper">
+                <!-- Main Profile Photo -->
+                <div class="hero-photo-container">
 
                     <img
                         src="images.jpeg"
-                        alt="JaySon profile image"
-                        class="profile-image"
+                        alt="JaySon profile picture"
+                        class="hero-photo"
                     >
 
                 </div>
@@ -176,40 +166,41 @@
 
 
 
-        <!-- ==============================
+        <!-- =====================================
              ABOUT
-        =============================== -->
-
+        ====================================== -->
         <section id="about" class="section-card">
 
             <div class="section-heading">
 
-                <div class="section-icon">
-                    <i class="fa-solid fa-user"></i>
-                </div>
+                <span class="section-number">01</span>
 
                 <div>
-                    <p class="section-label">01</p>
-                    <h2>About</h2>
+                    <p class="eyebrow">About Me</p>
+                    <h2>Who I Am</h2>
                 </div>
 
             </div>
 
 
-            <div class="section-content">
+            <div class="about-content">
 
                 <p>
-                    I am a BSIT student majoring in Network Design and
-                    Management at Nueva Vizcaya State University —
-                    Bayombong Campus.
+                    I am a Bachelor of Science in Information Technology
+                    student majoring in Network Design & Management at
+                    Nueva Vizcaya State University – Bayombong Campus.
                 </p>
 
                 <p>
-                    My interests include networking, systems, IT
-                    infrastructure, and understanding how technology works
-                    behind the scenes. I enjoy troubleshooting problems,
-                    analyzing how systems interact, and learning through
-                    hands-on experience.
+                    My interests are mainly focused on networking,
+                    systems, IT infrastructure, troubleshooting,
+                    analysis, and hands-on technology.
+                </p>
+
+                <p>
+                    I enjoy understanding how systems work,
+                    identifying problems, and figuring out practical
+                    solutions rather than simply following instructions.
                 </p>
 
             </div>
@@ -218,21 +209,18 @@
 
 
 
-        <!-- ==============================
+        <!-- =====================================
              SKILLS
-        =============================== -->
-
+        ====================================== -->
         <section id="skills" class="section-card">
 
             <div class="section-heading">
 
-                <div class="section-icon">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                </div>
+                <span class="section-number">02</span>
 
                 <div>
-                    <p class="section-label">02</p>
-                    <h2>Skills</h2>
+                    <p class="eyebrow">Skills</p>
+                    <h2>What I Can Do</h2>
                 </div>
 
             </div>
@@ -241,72 +229,59 @@
             <div class="skills-grid">
 
 
-                <div class="skill-group">
+                <!-- Networking -->
+                <div class="skill-box">
 
-                    <div class="skill-title">
-
+                    <div class="skill-icon">
                         <i class="fa-solid fa-network-wired"></i>
-
-                        <h3>Networking</h3>
-
                     </div>
 
+                    <h3>Networking</h3>
 
                     <ul>
-
                         <li>Basic VLAN configuration</li>
                         <li>Basic routing</li>
                         <li>Basic trunking</li>
                         <li>Basic network topology</li>
                         <li>Basic network troubleshooting</li>
-
                     </ul>
 
                 </div>
 
 
+                <!-- Programming -->
+                <div class="skill-box">
 
-                <div class="skill-group">
-
-                    <div class="skill-title">
-
+                    <div class="skill-icon">
                         <i class="fa-solid fa-code"></i>
-
-                        <h3>Programming</h3>
-
                     </div>
 
+                    <h3>Programming</h3>
 
                     <ul>
-
                         <li>Basic Java</li>
                         <li>Object-Oriented Programming</li>
-
+                        <li>Basic system development</li>
                     </ul>
 
                 </div>
 
 
+                <!-- Tools -->
+                <div class="skill-box">
 
-                <div class="skill-group">
-
-                    <div class="skill-title">
-
-                        <i class="fa-solid fa-laptop-code"></i>
-
-                        <h3>Tools & Platforms</h3>
-
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-toolbox"></i>
                     </div>
 
+                    <h3>Tools & Platforms</h3>
 
                     <ul>
-
                         <li>GitHub</li>
                         <li>Vercel</li>
                         <li>Cisco Packet Tracer</li>
                         <li>Microsoft Power Apps</li>
                         <li>Microsoft SharePoint</li>
-
                     </ul>
 
                 </div>
@@ -317,21 +292,18 @@
 
 
 
-        <!-- ==============================
+        <!-- =====================================
              CURRENTLY LEARNING
-        =============================== -->
-
+        ====================================== -->
         <section id="learning" class="section-card">
 
             <div class="section-heading">
 
-                <div class="section-icon">
-                    <i class="fa-solid fa-book-open"></i>
-                </div>
+                <span class="section-number">03</span>
 
                 <div>
-                    <p class="section-label">03</p>
-                    <h2>Currently Learning</h2>
+                    <p class="eyebrow">Currently Learning</p>
+                    <h2>What I'm Working On</h2>
                 </div>
 
             </div>
@@ -340,32 +312,32 @@
             <div class="learning-list">
 
                 <div class="learning-item">
-                    <span class="learning-number">01</span>
+                    <i class="fa-solid fa-network-wired"></i>
                     <span>Network troubleshooting</span>
                 </div>
 
                 <div class="learning-item">
-                    <span class="learning-number">02</span>
+                    <i class="fa-solid fa-diagram-project"></i>
                     <span>Systems analysis and design</span>
                 </div>
 
                 <div class="learning-item">
-                    <span class="learning-number">03</span>
+                    <i class="fa-solid fa-laptop-code"></i>
                     <span>Software engineering</span>
                 </div>
 
                 <div class="learning-item">
-                    <span class="learning-number">04</span>
+                    <i class="fa-solid fa-list-check"></i>
                     <span>IT project development</span>
                 </div>
 
                 <div class="learning-item">
-                    <span class="learning-number">05</span>
+                    <i class="fa-brands fa-github"></i>
                     <span>Git and GitHub workflow</span>
                 </div>
 
                 <div class="learning-item">
-                    <span class="learning-number">06</span>
+                    <i class="fa-solid fa-code"></i>
                     <span>Programming and system development</span>
                 </div>
 
@@ -375,21 +347,18 @@
 
 
 
-        <!-- ==============================
+        <!-- =====================================
              PROJECTS
-        =============================== -->
-
+        ====================================== -->
         <section id="projects" class="section-card">
 
             <div class="section-heading">
 
-                <div class="section-icon">
-                    <i class="fa-solid fa-folder-open"></i>
-                </div>
+                <span class="section-number">04</span>
 
                 <div>
-                    <p class="section-label">04</p>
-                    <h2>Projects</h2>
+                    <p class="eyebrow">Projects</p>
+                    <h2>Things I've Built</h2>
                 </div>
 
             </div>
@@ -398,9 +367,245 @@
             <div class="projects-grid">
 
 
-                <!-- LIBRARY MANAGEMENT -->
-
+                <!-- Library Management System -->
                 <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+
+                        <span class="project-type">
+                            JAVA • OOP
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Library Management System
+                    </h3>
+
+
+                    <p>
+                        A console-based Java project demonstrating
+                        object-oriented programming through classes,
+                        objects, methods, encapsulation, and basic
+                        borrowing transactions.
+                    </p>
+
+
+                    <a
+                        href="https://github.com/JaySon-arch-dev/Library-Manager-System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View on GitHub
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+
+                <!-- Equipment Borrowing -->
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+
+                        <span class="project-type">
+                            IN DEVELOPMENT
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Equipment Borrowing Management System
+                    </h3>
+
+
+                    <p>
+                        An ongoing system concept for managing faculty
+                        equipment borrowing and returning. The project
+                        explores authentication, role-based access,
+                        borrowing, approval, transactions, and return
+                        management.
+                    </p>
+
+
+                    <div class="project-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Currently in development
+                    </div>
+
+                </article>
+
+
+
+                <!-- Network Configuration -->
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+
+                        <span class="project-type">
+                            CISCO PACKET TRACER
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Network Configuration Projects
+                    </h3>
+
+
+                    <p>
+                        Academic networking exercises involving VLAN
+                        configuration, trunking, routing, DHCP,
+                        network topology, and inter-network
+                        communication.
+                    </p>
+
+
+                    <div class="project-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Academic projects
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             EDUCATION
+        ====================================== -->
+        <section id="education" class="section-card">
+
+            <div class="section-heading">
+
+                <span class="section-number">05</span>
+
+                <div>
+                    <p class="eyebrow">Education</p>
+                    <h2>Academic Background</h2>
+                </div>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <div class="education-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+
+                <div class="education-info">
+
+                    <h3>
+                        Nueva Vizcaya State University
+                    </h3>
+
+                    <p>
+                        Bayombong Campus
+                    </p>
+
+                    <strong>
+                        Bachelor of Science in Information Technology
+                    </strong>
+
+                    <span>
+                        Major in Network Design & Management
+                    </span>
+
+                    <span>
+                        Currently Studying • 3rd Year
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CONTACT
+        ====================================== -->
+        <section id="contact" class="section-card contact-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">06</span>
+
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let's Connect</h2>
+                </div>
+
+            </div>
+
+
+            <p>
+                If you'd like to see more of my work,
+                you can visit my GitHub profile.
+            </p>
+
+
+            <a
+                href="https://github.com/JaySon-arch-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-button"
+            >
+                <i class="fa-brands fa-github"></i>
+                Visit My GitHub
+            </a>
+
+
+            <div class="contact-message">
+                Still learning. Still building.
+                Still figuring things out.
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+        <footer class="footer">
+
+            © 2026 JaySon • BSIT Network Design & Management
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+                    </html>    <article class="project-card">
 
                     <div class="project-icon">
                         <i class="fa-solid fa-book"></i>
