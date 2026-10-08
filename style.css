@@ -4,7 +4,6 @@
 ========================================================= */
 
 :root {
-
     --khaki-dark: #6f624f;
     --khaki: #9a8b73;
     --khaki-light: #e9e3d7;
@@ -23,7 +22,6 @@
     --muted: #81786e;
 
     --sidebar-width: 250px;
-
 }
 
 
@@ -45,7 +43,6 @@ html {
 
 
 body {
-
     font-family: "Inter", sans-serif;
 
     background: var(--page-background);
@@ -53,16 +50,14 @@ body {
     color: var(--brown-dark);
 
     line-height: 1.7;
-
 }
 
 
 /* =========================================================
-   SIDEBAR
+   DESKTOP SIDEBAR
 ========================================================= */
 
 .sidebar {
-
     position: fixed;
 
     top: 0;
@@ -82,7 +77,6 @@ body {
     justify-content: space-between;
 
     z-index: 1000;
-
 }
 
 
@@ -91,18 +85,15 @@ body {
 ========================================================= */
 
 .brand {
-
     display: flex;
 
     align-items: center;
 
     gap: 12px;
-
 }
 
 
 .brand-mark {
-
     width: 44px;
     height: 44px;
 
@@ -111,30 +102,26 @@ body {
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
-
     background: var(--white);
 
     color: var(--khaki-dark);
 
+    border-radius: 10px;
+
     font-size: 20px;
 
     font-weight: 700;
-
 }
 
 
 .brand-text h2 {
-
     font-size: 20px;
 
     line-height: 1.2;
-
 }
 
 
 .brand-text span {
-
     display: block;
 
     margin-top: 3px;
@@ -144,7 +131,6 @@ body {
     font-size: 11px;
 
     letter-spacing: 0.08em;
-
 }
 
 
@@ -153,34 +139,29 @@ body {
 ========================================================= */
 
 .sidebar-divider {
-
     width: 100%;
     height: 1px;
 
     margin: 28px 0 22px;
 
     background: rgba(255, 255, 255, 0.2);
-
 }
 
 
 /* =========================================================
-   NAVIGATION
+   DESKTOP NAVIGATION
 ========================================================= */
 
 .navigation {
-
     display: flex;
 
     flex-direction: column;
 
     gap: 6px;
-
 }
 
 
 .nav-link {
-
     display: flex;
 
     align-items: center;
@@ -198,36 +179,30 @@ body {
     font-size: 14px;
 
     font-weight: 500;
-
 }
 
 
 .nav-link i {
-
     width: 18px;
 
     text-align: center;
 
     font-size: 14px;
-
 }
 
 
 .nav-link:hover {
-
     background: rgba(255, 255, 255, 0.12);
 
     color: var(--white);
-
 }
 
 
 /* =========================================================
-   SIDEBAR FOOTER
+   SIDEBAR BOTTOM
 ========================================================= */
 
 .sidebar-bottom {
-
     padding-top: 18px;
 
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -239,16 +214,14 @@ body {
     color: #ded7ca;
 
     font-size: 11px;
-
 }
 
 
 /* =========================================================
-   MAIN CONTENT
+   MAIN CONTENT — DESKTOP
 ========================================================= */
 
 .main-content {
-
     width: calc(100% - var(--sidebar-width));
 
     max-width: 1200px;
@@ -256,7 +229,6 @@ body {
     margin-left: var(--sidebar-width);
 
     padding: 45px 50px 30px;
-
 }
 
 
@@ -265,7 +237,6 @@ body {
 ========================================================= */
 
 .section-card {
-
     margin-bottom: 28px;
 
     padding: 42px;
@@ -277,7 +248,6 @@ body {
     border-radius: 14px;
 
     box-shadow: 0 2px 8px rgba(60, 50, 40, 0.04);
-
 }
 
 
@@ -286,18 +256,15 @@ body {
 ========================================================= */
 
 .hero-section {
-
     min-height: 430px;
 
     display: flex;
 
     align-items: center;
-
 }
 
 
 .hero-content {
-
     width: 100%;
 
     display: flex;
@@ -307,19 +274,15 @@ body {
     justify-content: space-between;
 
     gap: 50px;
-
 }
 
 
 .hero-text {
-
     max-width: 700px;
-
 }
 
 
 .eyebrow {
-
     display: inline-flex;
 
     align-items: center;
@@ -337,12 +300,10 @@ body {
     letter-spacing: 0.12em;
 
     text-transform: uppercase;
-
 }
 
 
 .hero-text h1 {
-
     margin-bottom: 12px;
 
     color: var(--brown-dark);
@@ -350,41 +311,33 @@ body {
     font-size: clamp(42px, 6vw, 68px);
 
     line-height: 1.05;
-
 }
 
 
 .hero-text h1 span {
-
     color: var(--khaki-dark);
-
 }
 
 
 .hero-text h2 {
-
     color: var(--brown);
 
     font-size: 20px;
 
     font-weight: 600;
-
 }
 
 
 .university {
-
     margin-top: 5px;
 
     color: #746b61;
 
     font-size: 14px;
-
 }
 
 
 .hero-tags {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -392,12 +345,10 @@ body {
     gap: 8px;
 
     margin: 24px 0;
-
 }
 
 
 .hero-tags span {
-
     padding: 6px 11px;
 
     background: var(--khaki-pale);
@@ -411,18 +362,15 @@ body {
     font-size: 12px;
 
     font-weight: 600;
-
 }
 
 
 .hero-description {
-
     max-width: 650px;
 
     color: #655d54;
 
     font-size: 15px;
-
 }
 
 
@@ -431,7 +379,6 @@ body {
 ========================================================= */
 
 .profile-image-wrapper {
-
     flex-shrink: 0;
 
     width: 190px;
@@ -442,12 +389,10 @@ body {
     background: var(--khaki-light);
 
     border-radius: 50%;
-
 }
 
 
 .profile-image {
-
     width: 100%;
     height: 100%;
 
@@ -458,16 +403,14 @@ body {
     border: 5px solid var(--white);
 
     border-radius: 50%;
-
 }
 
 
 /* =========================================================
-   SECTION HEADING
+   SECTION HEADINGS
 ========================================================= */
 
 .section-heading {
-
     display: flex;
 
     align-items: center;
@@ -475,12 +418,10 @@ body {
     gap: 15px;
 
     margin-bottom: 30px;
-
 }
 
 
 .section-icon {
-
     width: 44px;
     height: 44px;
 
@@ -498,12 +439,10 @@ body {
     border-radius: 10px;
 
     font-size: 17px;
-
 }
 
 
 .section-label {
-
     color: var(--khaki);
 
     font-size: 10px;
@@ -511,18 +450,15 @@ body {
     font-weight: 700;
 
     letter-spacing: 0.12em;
-
 }
 
 
 .section-heading h2 {
-
     color: var(--brown-dark);
 
     font-size: 28px;
 
     line-height: 1.2;
-
 }
 
 
@@ -531,27 +467,21 @@ body {
 ========================================================= */
 
 .section-content {
-
     max-width: 850px;
-
 }
 
 
 .section-content p {
-
     margin-bottom: 18px;
 
     color: var(--text);
 
     font-size: 15px;
-
 }
 
 
 .section-content p:last-child {
-
     margin-bottom: 0;
-
 }
 
 
@@ -560,18 +490,15 @@ body {
 ========================================================= */
 
 .skills-grid {
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 18px;
-
 }
 
 
 .skill-group {
-
     padding: 25px;
 
     background: var(--khaki-pale);
@@ -579,12 +506,10 @@ body {
     border: 1px solid var(--border);
 
     border-radius: 10px;
-
 }
 
 
 .skill-title {
-
     display: flex;
 
     align-items: center;
@@ -592,37 +517,29 @@ body {
     gap: 10px;
 
     margin-bottom: 18px;
-
 }
 
 
 .skill-title i {
-
     color: var(--khaki-dark);
 
     font-size: 16px;
-
 }
 
 
 .skill-title h3 {
-
     color: var(--brown-dark);
 
     font-size: 16px;
-
 }
 
 
 .skill-group ul {
-
     list-style: none;
-
 }
 
 
 .skill-group li {
-
     position: relative;
 
     padding-left: 17px;
@@ -632,12 +549,10 @@ body {
     color: #625a51;
 
     font-size: 13px;
-
 }
 
 
 .skill-group li::before {
-
     content: "";
 
     position: absolute;
@@ -651,7 +566,6 @@ body {
     border-radius: 50%;
 
     background: var(--khaki);
-
 }
 
 
@@ -660,18 +574,15 @@ body {
 ========================================================= */
 
 .learning-list {
-
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
     gap: 10px;
-
 }
 
 
 .learning-item {
-
     display: flex;
 
     align-items: center;
@@ -685,12 +596,10 @@ body {
     border: 1px solid var(--border);
 
     border-radius: 9px;
-
 }
 
 
 .learning-number {
-
     min-width: 32px;
     height: 32px;
 
@@ -708,18 +617,15 @@ body {
     font-size: 11px;
 
     font-weight: 700;
-
 }
 
 
 .learning-item span:last-child {
-
     color: #564e46;
 
     font-size: 13px;
 
     font-weight: 500;
-
 }
 
 
@@ -728,18 +634,15 @@ body {
 ========================================================= */
 
 .projects-grid {
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 18px;
-
 }
 
 
 .project-card {
-
     display: flex;
 
     flex-direction: column;
@@ -751,12 +654,10 @@ body {
     border: 1px solid var(--border);
 
     border-radius: 10px;
-
 }
 
 
 .project-icon {
-
     width: 40px;
     height: 40px;
 
@@ -772,12 +673,10 @@ body {
     color: var(--khaki-dark);
 
     border-radius: 9px;
-
 }
 
 
 .project-type {
-
     margin-bottom: 6px;
 
     color: var(--khaki);
@@ -787,12 +686,10 @@ body {
     font-weight: 700;
 
     letter-spacing: 0.08em;
-
 }
 
 
 .project-content h3 {
-
     margin-bottom: 12px;
 
     color: var(--brown-dark);
@@ -800,23 +697,19 @@ body {
     font-size: 17px;
 
     line-height: 1.4;
-
 }
 
 
 .project-content p {
-
     margin-bottom: 12px;
 
     color: #665e55;
 
     font-size: 13px;
-
 }
 
 
 .project-link {
-
     display: inline-flex;
 
     align-items: center;
@@ -834,11 +727,613 @@ body {
     font-size: 12px;
 
     font-weight: 700;
-
 }
 
 
 .project-link:hover {
+    text-decoration: underline;
+}
+
+
+.project-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: auto;
+
+    padding-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.project-status i {
+    font-size: 6px;
+
+    color: var(--khaki);
+}
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: var(--khaki-pale);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+}
+
+
+.education-icon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--khaki-dark);
+
+    color: var(--white);
+
+    border-radius: 10px;
+}
+
+
+.education-status {
+    margin-bottom: 5px;
+
+    color: var(--khaki-dark);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+}
+
+
+.education-content h3 {
+    margin-bottom: 2px;
+
+    color: var(--brown-dark);
+
+    font-size: 19px;
+}
+
+
+.education-campus {
+    margin-bottom: 14px;
+
+    color: #746b61;
+
+    font-size: 13px;
+}
+
+
+.education-content > p:not(.education-status):not(.education-campus) {
+    color: #5f574e;
+
+    font-size: 13px;
+}
+
+
+.year-badge {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 5px 10px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    color: var(--khaki-dark);
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-content {
+    max-width: 700px;
+}
+
+
+.contact-content p {
+    margin-bottom: 20px;
+
+    color: #625a51;
+
+    font-size: 14px;
+}
+
+
+.github-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 11px 17px;
+
+    background: var(--khaki-dark);
+
+    color: var(--white);
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.github-button:hover {
+    background: var(--brown);
+}
+
+
+.contact-footer {
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.contact-footer p {
+    color: var(--khaki-dark);
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    padding: 10px 0 25px;
+
+    color: #887f74;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   TABLET
+   Still LEFT SIDEBAR
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    :root {
+        --sidebar-width: 210px;
+    }
+
+
+    .sidebar {
+        padding: 28px 17px;
+    }
+
+
+    .main-content {
+        padding: 35px 30px;
+    }
+
+
+    .section-card {
+        padding: 30px;
+    }
+
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .project-card:last-child {
+        grid-column: span 2;
+    }
+
+
+    .hero-content {
+        gap: 30px;
+    }
+
+
+    .profile-image-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+}
+
+
+/* =========================================================
+   PHONE VIEW
+   Navigation moves to TOP
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------
+       TOP NAVIGATION
+    ----------------------------------------- */
+
+    .sidebar {
+
+        position: sticky;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 13px 15px;
+
+        background: var(--khaki-dark);
+
+        display: block;
+
+    }
+
+
+    .brand {
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .brand-mark {
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 17px;
+
+    }
+
+
+    .brand-text h2 {
+
+        font-size: 17px;
+
+    }
+
+
+    .brand-text span {
+
+        font-size: 9px;
+
+    }
+
+
+    .sidebar-divider {
+
+        display: none;
+
+    }
+
+
+    /* -----------------------------------------
+       PHONE NAVIGATION BAR
+    ----------------------------------------- */
+
+    .navigation {
+
+        display: flex;
+
+        flex-direction: row;
+
+        gap: 6px;
+
+        overflow-x: auto;
+
+        padding: 2px 0 4px;
+
+        scrollbar-width: none;
+
+    }
+
+
+    .navigation::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+
+    .nav-link {
+
+        flex-shrink: 0;
+
+        padding: 8px 11px;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        border-radius: 7px;
+
+        font-size: 11px;
+
+    }
+
+
+    .nav-link i {
+
+        width: auto;
+
+        font-size: 11px;
+
+    }
+
+
+    .nav-link:hover {
+
+        background: rgba(255, 255, 255, 0.16);
+
+    }
+
+
+    /* -----------------------------------------
+       HIDE DESKTOP SIDEBAR FOOTER
+    ----------------------------------------- */
+
+    .sidebar-bottom {
+
+        display: none;
+
+    }
+
+
+    /* -----------------------------------------
+       MAIN CONTENT
+    ----------------------------------------- */
+
+    .main-content {
+
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 20px 15px;
+
+    }
+
+
+    /* -----------------------------------------
+       CARDS
+    ----------------------------------------- */
+
+    .section-card {
+
+        padding: 25px 20px;
+
+        margin-bottom: 18px;
+
+        border-radius: 11px;
+
+    }
+
+
+    /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .hero-section {
+
+        min-height: auto;
+
+    }
+
+
+    .hero-content {
+
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+    }
+
+
+    .profile-image-wrapper {
+
+        width: 125px;
+        height: 125px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .hero-text h2 {
+
+        font-size: 17px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 13px;
+
+    }
+
+
+    /* -----------------------------------------
+       SECTION HEADINGS
+    ----------------------------------------- */
+
+    .section-heading {
+
+        margin-bottom: 22px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    /* -----------------------------------------
+       SKILLS
+    ----------------------------------------- */
+
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* -----------------------------------------
+       LEARNING
+    ----------------------------------------- */
+
+    .learning-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* -----------------------------------------
+       PROJECTS
+    ----------------------------------------- */
+
+    .projects-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .project-card:last-child {
+
+        grid-column: auto;
+
+    }
+
+
+    /* -----------------------------------------
+       EDUCATION
+    ----------------------------------------- */
+
+    .education-card {
+
+        flex-direction: column;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .main-content {
+
+        padding: 15px 10px;
+
+    }
+
+
+    .section-card {
+
+        padding: 22px 17px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    /*
+       On very small phones, icons are kept visible
+       but text labels are hidden to save space.
+    */
+
+    .nav-link span {
+
+        display: none;
+
+    }
+
+
+    .nav-link {
+
+        width: 36px;
+
+        height: 36px;
+
+        justify-content: center;
+
+    }
+
+}
+```
+ct-link:hover {
 
     text-decoration: underline;
 
